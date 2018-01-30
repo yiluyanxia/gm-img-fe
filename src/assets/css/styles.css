@@ -214,6 +214,8 @@ textarea:-ms-input-placeholder {
   width: 232px;
   top: 56px;
   z-index: 1;
+  height: 100%;
+  overflow: auto;
   /* -webkit-transform: translateX(-242px); */
   /* transform: translateX(-242px); */
   transform: translateX(0);
@@ -221,6 +223,11 @@ textarea:-ms-input-placeholder {
   transition: transform .15s ease-in-out;
 }
 
+.mainbox{
+  margin-left: 232px;
+  margin-top: 56px;
+  padding: 0 40px;
+}
 .menuicon {
   padding: 6px 10px;
   width: 232px;
@@ -234,9 +241,10 @@ textarea:-ms-input-placeholder {
 }
 
 .searchbox {
-  width: 66%;
+  width: 66.66%;
   height: 36px;
   margin: auto 0 auto 50px;
+  padding: 0 10px;
 }
 
 .searchbox .ivu-input {
@@ -250,13 +258,93 @@ textarea:-ms-input-placeholder {
   display: -webkit-flex;
   display: flex;
 }
-.topavator{
-  height: 36px;
-  margin: auto 0;
-  line-height: 36px;  
+
+.topavator {
   z-index: 1;
+  display: flex;
+  align-items: center
 }
-.full-icon{
-  padding: 4px 15px 0 15px;
+
+.topavator * {
+  vertical-align: middle;
+}
+
+.full-icon,
+.lock-icon,
+.chat-icon {
+  padding: 0 12px;
   cursor: pointer;
+}
+
+.chat-icon {
+  padding-right: 24px;
+}
+
+.navbox .ivu-menu-light {
+  background: #f2f2f2;
+}
+
+.navbox .ivu-menu-vertical.ivu-menu-light:after {
+  display: none;
+}
+
+.navbox .ivu-menu-light.ivu-menu-vertical .ivu-menu-item-active:not(.ivu-menu-submenu) {
+  color: #212121;
+  border-right: none;
+  background-color: #e5e5e5;
+}
+
+.navbox .ivu-menu-item {
+  font-size: 16px;
+}
+
+.navbox .ivu-menu-vertical .ivu-menu-item:hover,
+.navbox .ivu-menu-vertical .ivu-menu-submenu-title:hover {
+  background: #e9e9e9;
+}
+
+.navbox:hover::-webkit-scrollbar {
+  display: block;
+}
+
+.navbox::-webkit-scrollbar {
+  width: 10px;
+  display: none;
+}
+
+.navbox::-webkit-scrollbar-button {
+  background-color: #bcbcbc;
+  display: none;
+}
+
+.navbox::-webkit-scrollbar-track {
+  background: #f2f2f2;
+}
+
+.navbox::-webkit-scrollbar-thumb {
+  background: #bcbcbc;
+}
+
+.navbox::-webkit-scrollbar-corner {
+  background: #bcbcbc;
+}
+
+.navbox::-webkit-scrollbar-resizer {
+  background: #bcbcbc;
+}
+
+.toolbox {
+  bottom: 0;
+  padding: 23px 12px 23px 15px;
+  position: fixed;
+  right: 0;
+  z-index: 21;
+}
+.create-btn .plusbtn{
+  width: 56px;
+  height: 56px;
+  font-size: 18px;
+  background-color: #d23f31;
+  border-color: #d23f31;
+  box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
 }
