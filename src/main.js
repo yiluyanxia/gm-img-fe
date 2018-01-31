@@ -8,6 +8,8 @@ import iView from 'iview';
 import 'iview/dist/styles/iview.css';
 import './assets/css/styles.css'
 
+import animate from 'animate.css'
+
 Vue.use(iView);
 Vue.config.productionTip = false
 

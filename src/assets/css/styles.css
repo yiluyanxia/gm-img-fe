@@ -342,6 +342,21 @@ textarea:-ms-input-placeholder {
   z-index: 21;
 }
 
+.create-btn:hover .cropcont{
+  display: block;
+}
+.cropcont{
+  display: none;
+  text-align: center;
+  margin-bottom: 16px;
+}
+.create-btn .cropbtn{
+  display: block;
+}
+.create-btn .cropbtn {
+  -webkit-animation-duration: 300ms;
+  animation-duration: 300ms;
+}
 .create-btn .plusbtn {
   width: 56px;
   height: 56px;
@@ -371,19 +386,29 @@ textarea:-ms-input-placeholder {
   box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, .12), 0 2px 4px rgba(0, 0, 0, .24);
 }
 
+.upload-list{
+  padding: 6px;
+  font-size: 0;
+}
 
 .upload-item {
   display: inline-block;
   width: 120px;
   height: 120px;
-  border: 1px solid transparent;
-  /* border-radius: 4px; */
+  /* border: 1px solid transparent; */
   position: relative;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
   margin-right: 15px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  line-height: 120px;
+  text-align: center;
+  overflow: hidden;
 }
 
-.upload-item img {
+.upload-item .upload-img {
+  width: 100%;
+  height: 100%;
   position: absolute;
   top: 0;
   right: 0;
@@ -393,7 +418,18 @@ textarea:-ms-input-placeholder {
   max-height: 100%;
   margin: auto;
 }
-
+.upload-item .upload-progress{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+}
 .upload-item-cover {
   display: none;
   position: absolute;
@@ -416,8 +452,54 @@ textarea:-ms-input-placeholder {
 }
 
 .upload-btn{
-  width: 120px;
-  height: 120px;
+  width: 118px;
+  height: 118px;
   border: 1px solid transparent;
-  line-height: 120px;
+  line-height: 134px;
+  box-sizing: border-box;
+}
+
+.cropper-img{
+  max-width: 100%;
+}
+.preview-img{
+  width: 320px;
+  height: 180px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.cropper-preview{
+  float: left;
+  margin-right: .5rem;
+  margin-bottom: .5rem;
+}
+.preview-img-md{
+  width: 160px;
+  height: 90px;
+  overflow: hidden;
+}
+.preview-img-sm{
+  width: 80px;
+  height: 45px;
+  overflow: hidden;
+}
+.preview-img-xs{
+  width: 40px;
+  height: 22.5px;
+  overflow: hidden;
+}
+.cropper-upload-btn{
+  padding: 20px 0;
+}
+.previewinfo{
+  padding-top: 20px;
+}
+.previewinfo ul li {
+  border-bottom: 1px solid #dfdfdf;
+  padding: 5px;
+}
+.previewinfo ul li label{
+  display: inline-block;
+  width: 80px;
+  font-weight: 700;
 }
