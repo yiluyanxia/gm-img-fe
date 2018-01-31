@@ -223,11 +223,12 @@ textarea:-ms-input-placeholder {
   transition: transform .15s ease-in-out;
 }
 
-.mainbox{
+.mainbox {
   margin-left: 232px;
   margin-top: 56px;
-  padding: 0 40px;
+  padding: 20px 40px;
 }
+
 .menuicon {
   padding: 6px 10px;
   width: 232px;
@@ -340,11 +341,83 @@ textarea:-ms-input-placeholder {
   right: 0;
   z-index: 21;
 }
-.create-btn .plusbtn{
+
+.create-btn .plusbtn {
   width: 56px;
   height: 56px;
   font-size: 18px;
   background-color: #d23f31;
   border-color: #d23f31;
-  box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
+  box-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
+}
+
+.subtitlebox{
+  padding-bottom: 14px;
+}
+.subtitlebox .title {
+  font-size: 18px;
+  color: #616161;
+}
+
+.direct-upload {}
+
+.chunkbox {
+
+}
+
+.shadowbox{
+  background-color: #fefefe;
+  padding: 6px;
+  box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, .12), 0 2px 4px rgba(0, 0, 0, .24);
+}
+
+
+.upload-item {
+  display: inline-block;
+  width: 120px;
+  height: 120px;
+  border: 1px solid transparent;
+  /* border-radius: 4px; */
+  position: relative;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  margin-right: 15px;
+}
+
+.upload-item img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+}
+
+.upload-item-cover {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.upload-item:hover .upload-item-cover {
+  display: block;
+}
+
+.upload-item-cover i {
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 0 2px;
+}
+
+.upload-btn{
+  width: 120px;
+  height: 120px;
+  border: 1px solid transparent;
+  line-height: 120px;
 }

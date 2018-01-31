@@ -13,10 +13,16 @@ export const otherRouter = {
     //   component:()=>import('@/views/index.vue')
     // },
     {
-      path:'upload',
-      title:'upload',
-      name:'upload',
-      component:()=>import('@/views/upload.vue')
+      path:'direct-upload',
+      title:'direct-upload',
+      name:'direct-upload',
+      component:()=>import('@/views/upload/direct-upload.vue')
+    },
+    {
+      path:'cropper-upload',
+      title:'cropper-upload',
+      name:'cropper-upload',
+      component:()=>import('@/views/upload/cropper-upload.vue')
     },
 
   ]
