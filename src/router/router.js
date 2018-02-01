@@ -44,17 +44,17 @@ export const appRouter = [{
     }]
   },
   {
-    path: '/upload',
+    path: '/my-images',
     icon: 'upload',
-    name: 'index',
-    title: '首页',
+    name: 'my-images',
+    title: 'My Images',
     component: Layout,
     children: [{
       path: 'index',
-      title: '首页',
-      name: 'index',
+      title: 'My Images',
+      name: 'my-images',
       component: () =>
-        import ('@/views/index.vue')
+        import ('@/views/my-images/my-images.vue')
     }]
   },
 ]
