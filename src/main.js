@@ -9,8 +9,11 @@ import 'iview/dist/styles/iview.css';
 import './assets/css/styles.css'
 
 import animate from 'animate.css'
+import {VueMasonryPlugin} from 'vue-masonry';
 
 Vue.use(iView);
+Vue.use(VueMasonryPlugin)
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

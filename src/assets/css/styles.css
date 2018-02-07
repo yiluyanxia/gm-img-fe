@@ -342,21 +342,25 @@ textarea:-ms-input-placeholder {
   z-index: 21;
 }
 
-.create-btn:hover .cropcont{
+.create-btn:hover .cropcont {
   display: block;
 }
-.cropcont{
+
+.cropcont {
   display: none;
   text-align: center;
   margin-bottom: 16px;
 }
-.create-btn .cropbtn{
+
+.create-btn .cropbtn {
   display: block;
 }
+
 .create-btn .cropbtn {
   -webkit-animation-duration: 300ms;
   animation-duration: 300ms;
 }
+
 .create-btn .plusbtn {
   width: 56px;
   height: 56px;
@@ -366,9 +370,10 @@ textarea:-ms-input-placeholder {
   box-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
 }
 
-.subtitlebox{
+.subtitlebox {
   padding-bottom: 14px;
 }
+
 .subtitlebox .title {
   font-size: 18px;
   color: #616161;
@@ -376,17 +381,15 @@ textarea:-ms-input-placeholder {
 
 .direct-upload {}
 
-.chunkbox {
+.chunkbox {}
 
-}
-
-.shadowbox{
+.shadowbox {
   background-color: #fefefe;
   padding: 6px;
   box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, .12), 0 2px 4px rgba(0, 0, 0, .24);
 }
 
-.upload-list{
+.upload-list {
   padding: 6px;
   font-size: 0;
 }
@@ -418,7 +421,8 @@ textarea:-ms-input-placeholder {
   max-height: 100%;
   margin: auto;
 }
-.upload-item .upload-progress{
+
+.upload-item .upload-progress {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -430,6 +434,7 @@ textarea:-ms-input-placeholder {
   max-height: 100%;
   margin: auto;
 }
+
 .upload-item-cover {
   display: none;
   position: absolute;
@@ -451,7 +456,7 @@ textarea:-ms-input-placeholder {
   margin: 0 2px;
 }
 
-.upload-btn{
+.upload-btn {
   width: 118px;
   height: 118px;
   border: 1px solid transparent;
@@ -459,76 +464,153 @@ textarea:-ms-input-placeholder {
   box-sizing: border-box;
 }
 
-.cropper-img{
+.cropper-img {
   max-width: 100%;
 }
-.preview-img{
+
+.preview-img {
   width: 320px;
   height: 180px;
   overflow: hidden;
   margin-bottom: 20px;
 }
-.cropper-preview{
+
+.cropper-preview {
   float: left;
   margin-right: .5rem;
   margin-bottom: .5rem;
 }
-.preview-img-md{
+
+.preview-img-md {
   width: 160px;
   height: 90px;
   overflow: hidden;
 }
-.preview-img-sm{
+
+.preview-img-sm {
   width: 80px;
   height: 45px;
   overflow: hidden;
 }
-.preview-img-xs{
+
+.preview-img-xs {
   width: 40px;
   height: 22.5px;
   overflow: hidden;
 }
-.cropper-upload-btn{
+
+.cropper-upload-btn {
   padding: 20px 0;
 }
-.previewinfo{
+
+.previewinfo {
   padding-top: 20px;
 }
+
 .previewinfo ul li {
   border-bottom: 1px solid #dfdfdf;
   padding: 5px;
 }
-.previewinfo ul li label{
+
+.previewinfo ul li label {
   display: inline-block;
   width: 80px;
   font-weight: 700;
 }
-.my-images-subtitle{
+
+.my-images-subtitle {
   position: relative;
 }
-.my-images-subtitle .changebox{
+
+.my-images-subtitle .changebox {
   position: absolute;
   right: 0;
   top: -5px;
 }
-.my-images{
 
-}
-.img-shape{
+.my-images {}
+
+.img-shape {
+  display: block;
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   max-width: 100%;
-  max-width: 100%;
+  max-height: 100%;
   margin: auto;
 }
-.grid-item{
+
+.grid-item {
   position: relative;
   width: 100%;
   height: 300px;
   border: 1px solid #dfdfdf;
   box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, .12), 0 2px 4px rgba(0, 0, 0, .24);
   margin-bottom: 16px;
+}
+
+.grid-mini-item {
+  height: 120px;
+}
+
+.waterfall-images {
+  /* background: rgba(0, 0, 0, 0.6); */
+  padding: 20px;
+}
+
+.waterfall-images .item {
+  width: 33.333%
+}
+
+.waterfall-item {
+  padding: 20px;
+  overflow: hidden;
+}
+
+.waterfall-item img {
+  width: 100%;
+}
+
+.waterfall-item .info {
+  background: rgba(255, 255, 255, 1);
+  padding: 20px;
+  border: 1px solid #dfdfdf;
+}
+
+.waterfall-item .info h3 {
+  color: rgb(0, 120, 215);
+  font-size: 20px;
+}
+
+.waterfall-item .info p {
+  font-size: 16px;
+}
+
+.ablum-item {
+  width: 96%;
+  height: 120px;
+  line-height: 120px;
+  text-align: center;
+  position: relative;
+  border: 1px solid #dfdfdf;
+  /* background-color: #878782; */
+  margin: 0 2%;
+  cursor: pointer;
+  box-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
+  color: #898984;
+}
+
+.ablum-item:hover {
+  color: #2d8cf0;
+  box-shadow: 0 0 4px rgba(45, 140, 240, .14), 0 4px 8px rgba(45, 140, 240, .28);
+}
+.ablum-item *{
+  vertical-align: middle;
+}
+.draggable{
+  width: 500px;
+  height: 600px;
+  border: 1px solid #dfdfdf;
 }
