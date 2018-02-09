@@ -10,6 +10,9 @@ import './assets/css/styles.css'
 
 import animate from 'animate.css'
 import {VueMasonryPlugin} from 'vue-masonry';
+import store from './store';
+// import Vuex from 'vuex';
+// Vue.use(Vuex);
 
 Vue.use(iView);
 Vue.use(VueMasonryPlugin)
@@ -20,6 +23,7 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router: router,
+  store: store,
   // router,
   components: { App },
   template: '<App/>'

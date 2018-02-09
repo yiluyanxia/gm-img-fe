@@ -31,20 +31,21 @@ export const otherRouter = {
 
 }
 
-export const appRouter = [{
-    path: '/index',
-    icon: 'home',
-    name: 'index',
-    title: '首页',
-    component: Layout,
-    children: [{
-      path: 'index',
-      title: '首页',
-      name: 'index',
-      component: () =>
-        import ('@/views/index.vue')
-    }]
-  },
+export const appRouter = [
+  // {
+  //   path: '/index',
+  //   icon: 'home',
+  //   name: 'index',
+  //   title: '首页',
+  //   component: Layout,
+  //   children: [{
+  //     path: 'index',
+  //     title: '首页',
+  //     name: 'index',
+  //     component: () =>
+  //       import ('@/views/index.vue')
+  //   }]
+  // },
   {
     path: '/my-images',
     icon: 'upload',
@@ -53,6 +54,7 @@ export const appRouter = [{
     component: Layout,
     children: [{
       path: 'index',
+      icon: 'upload',
       title: 'My Images',
       name: 'my-images',
       component: () =>
@@ -63,30 +65,32 @@ export const appRouter = [{
     path: '/album',
     icon: 'ios-browsers',
     name: 'album',
-    title: 'album',
+    title: 'Album',
     component: Layout,
     children: [{
       path: 'index',
+      icon: 'ios-browsers',
       title: 'All',
       name: 'album',
       component: () =>
         import ('@/views/album/album.vue')
     }]
   },
-  {
-    path: '/help',
-    icon: 'help-circled',
-    name: 'help',
-    title: 'help',
-    component: Layout,
-    children: [{
-      path: 'index',
-      title: 'help',
-      name: 'help',
-      component: () =>
-        import ('@/views/help/help.vue')
-    }]
-  },
+  // {
+  //   path: '/help',
+  //   icon: 'help-circled',
+  //   name: 'help',
+  //   title: 'Other',
+  //   component: Layout,
+  //   children: [{
+  //     path: 'index',
+  //     icon: 'help-circled',
+  //     title: 'help',
+  //     name: 'help',
+  //     component: () =>
+  //       import ('@/views/help/help.vue')
+  //   }]
+  // },
 ]
 
 export const routers = [
