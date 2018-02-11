@@ -17,27 +17,35 @@
 
     <Menu active-name="1" width="auto"  @on-select="changeFakeMenu">
       <MenuGroup title="Others">
-        <MenuItem name="1">
+        <MenuItem name="help">
         <Icon type="help-circled"></Icon>
         Help
         </MenuItem>
-        <MenuItem name="2">
+        <MenuItem name="about">
         <Icon type="eye-disabled"></Icon>
         About me
         </MenuItem>
       </MenuGroup>
     </Menu>
-    <help></help>
+    <help v-if="isHelpShow" :isHelp="isHelpShow"></help>
+    <about v-if="isAboutShow" :isAbout="isAboutShow"></about>
+   
+    </drag>
   </div>
 </template>
 <script>
-import Help from '@/views/help/help'
+import Help from "@/views/others/help";
+import About from "@/views/others/about";
 export default {
-  components:{
-    Help
+  components: {
+    Help,
+    About,
   },
   data() {
-    return {};
+    return {
+      isHelpShow:false,
+      isAboutShow:false,
+    };
   },
   computed: {
     menuList() {
@@ -57,7 +65,17 @@ export default {
       this.$router.push({ name: active });
     },
     changeFakeMenu: function(active) {
-      this.$emit("on-change", active);
+      console.log(active);
+      if(active=="help"){
+          this.isHelpShow = true;
+          this.isAboutShow = false;
+          console.log(this.isHelpShow);
+      }
+      if(active=="about"){
+          this.isAboutShow = true;
+          this.isHelpShow = false;
+      }
+      // this.$emit("on-change", active);
     }
   }
 };

@@ -1,6 +1,6 @@
 <template>
   <div class="component">
-    <yanxia-drag v-model="isShow">
+    <yanxia-drag v-model="isShow" left="260" top="290" title="Help">
       <div class="help-cont">
         <Collapse v-model="collVal" accordion>
           <Panel name="1">
@@ -16,13 +16,12 @@
             </p>
           </Panel>
           <Panel name="3">
-            Who an I?
+            Who am I?
             <p slot="content">
               I want to change who I was.
             </p>
           </Panel>
         </Collapse>
-
       </div>
     </yanxia-drag>
   </div>
@@ -34,15 +33,23 @@ export default {
   components: {
     yanxiaDrag
   },
+  props: ["isHelp"],
   data() {
     return {
-      isShow: true,
+      isShow: this.isHelp,
       collVal: "1"
     };
   },
   computed: {},
-  mounted() {},
-  methods: {}
+  mounted() {
+    console.log(this.isShow);
+  },
+  methods: {},
+  watch: {
+    isHelp(val) {
+      this.isShow = val;
+    }
+  }
 };
 </script>
 <style>

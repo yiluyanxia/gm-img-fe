@@ -1,4 +1,40 @@
 import Layout from '@/components/layout'
+export const loginRouter = {
+  path: '/login',
+  name: 'login',
+  meta: {
+    title: 'Login - 登录'
+  },
+  component: () =>
+    import ('@/views/login/login.vue')
+};
+export const loginPwdRouter = {
+  path: '/login-pwd',
+  name: 'login-pwd',
+  meta: {
+    title: 'Login - 登录'
+  },
+  component: () =>
+    import ('@/views/login/login-pwd.vue')
+};
+export const regRouter = {
+  path: '/reg',
+  name: 'reg',
+  meta: {
+    title: 'reg - 注册'
+  },
+  component: () =>
+    import ('@/views/reg/reg.vue')
+};
+export const regPwdRouter = {
+  path: '/reg-pwd',
+  name: 'reg-pwd',
+  meta: {
+    title: 'reg - 注册'
+  },
+  component: () =>
+    import ('@/views/reg/reg-pwd.vue')
+};
 
 export const otherRouter = {
   path: '/',
@@ -94,6 +130,10 @@ export const appRouter = [
 ]
 
 export const routers = [
+  loginRouter,
+  loginPwdRouter,
+  regRouter,
+  regPwdRouter,
   otherRouter,
   ...appRouter,
 ]

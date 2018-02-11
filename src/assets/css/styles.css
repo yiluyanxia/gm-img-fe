@@ -216,7 +216,6 @@ textarea:-ms-input-placeholder {
   z-index: 1;
   height: 100%;
   overflow: auto;
-  
   /* -webkit-transform: translateX(-242px); */
   /* transform: translateX(-242px); */
   transform: translateX(0);
@@ -607,11 +606,131 @@ textarea:-ms-input-placeholder {
   color: #2d8cf0;
   box-shadow: 0 0 4px rgba(45, 140, 240, .14), 0 4px 8px rgba(45, 140, 240, .28);
 }
-.ablum-item *{
+
+.ablum-item * {
   vertical-align: middle;
 }
-.draggable{
+
+.draggable {
   width: 500px;
   height: 600px;
   border: 1px solid #dfdfdf;
+}
+
+.loginwrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.loginbox {
+  width: 450px;
+  flex-shrink: 0;
+  background-color: #fff;
+  box-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
+  margin: 0 auto;
+  padding: 40px 40px 36px;
+}
+
+.loginbox .brand {
+  font-size: 24px;
+  padding-bottom: 10px;
+}
+
+.loginbox .name {
+  font-size: 24px;
+  font-weight: 400;
+  color: #212121;
+}
+
+.loginform {
+  padding-top: 40px;
+  padding-bottom: 50px;
+}
+
+.loginform li {
+  margin: 20px 0 50px;
+  height: 40px;
+}
+
+.loginform .inputbox {
+  width: 100%;
+  border: 0 none;
+  border-bottom: 2px solid rgb(223, 223, 223);
+  outline: none;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 15px;
+}
+
+.loginform .inputbox {
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid rgb(233, 233, 233);
+  outline: none;
+  color: #757575;
+  font-size: 15px;
+}
+
+.loginform input[type="text"]:focus + label:before,
+.loginform input[type="password"]:focus + label:before {
+  color: #2d8cf0;
+}
+
+.loginform input:focus + label:before,
+.loginform input:valid + label:before {
+  transition-duration: 0.2s;
+  transform: translate(-10px, -34px) scale(0.8, 0.8);
+}
+
+.loginform input[type="text"]:invalid + label[alt]:before,
+.loginform input[type="password"]:invalid + label[alt]:before {
+  content: attr(alt);
+}
+
+.loginform input + label {
+  display: block;
+  pointer-events: none;
+  margin-top: -24px;
+}
+
+.loginform input + label:before {
+  content: attr(alt);
+  display: inline-block;
+  color: #2d8cf0;
+  transition: 0.2s ease-out;
+}
+.loginform input + label:after {
+  content: '';
+  display: inline-block;
+}
+ 
+.loginform input:focus + label::after{
+  content: '';
+  display: block;
+  border-bottom: 2px solid #2d8cf0;
+  animation: inputRemoveUnderline .3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes inputRemoveUnderline {
+  0% {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+
+.loginform .form-btn{
+  float: right;
+}
+.loginform .forgot{
+  float: left;
+  color: #2d8cf0;
+  cursor: pointer;
 }
