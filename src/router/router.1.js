@@ -104,12 +104,12 @@ export const appRouter = [
     path: '/my-images',
     icon: 'upload',
     name: 'my-images',
-    title: 'images',
+    title: 'myImage',
     component: Layout,
     children: [{
       path: 'index',
       icon: 'upload',
-      title: 'myImage',
+      title: 'My Images',
       name: 'my-images',
       component: () =>
         import ('@/views/my-images/my-images.vue')
@@ -119,12 +119,12 @@ export const appRouter = [
     path: '/album',
     icon: 'ios-browsers',
     name: 'album',
-    title: 'album',
+    title: 'Album',
     component: Layout,
     children: [{
       path: 'index',
       icon: 'ios-browsers',
-      title: 'all',
+      title: 'All',
       name: 'album',
       component: () =>
         import ('@/views/album/album.vue')

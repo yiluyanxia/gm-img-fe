@@ -3,11 +3,11 @@
 
     <Menu :active-name="$route.name" @on-select="changeMenu" width="auto">
       <template v-for="item in menuList">
-        <MenuGroup :title="$t(item.title)">
+        <MenuGroup :title="item.title">
           <template v-for="child in item.children">
             <MenuItem :name="child.name">
             <Icon :type="child.icon"></Icon>
-            {{$t(child.title)}}
+            {{child.title}}
             </MenuItem>
           </template>
 
@@ -16,7 +16,7 @@
     </Menu>
 
     <Menu active-name="1" width="auto"  @on-select="changeFakeMenu">
-      <MenuGroup :title="$t('others')">
+      <MenuGroup title="Others">
         <MenuItem name="help">
         <Icon type="help-circled"></Icon>
         {{$t('help')}}
