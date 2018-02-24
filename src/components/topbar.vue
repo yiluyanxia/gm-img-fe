@@ -18,12 +18,12 @@
         </Input>
       </div>
       <div class="topavator">
-        <div class="full-icon">
+        <!-- <div class="full-icon">
           <Tooltip content="全屏" placement="bottom">
             <Icon type="arrow-expand" color="#fefefe" size="24"></Icon>
           </Tooltip>
-          
-        </div>
+        </div> -->
+        <full-screen></full-screen>
         <div class="lock-icon">
           <Tooltip content="锁屏" placement="bottom">
             <Icon type="locked" color="#fefefe" size="20"></Icon>
@@ -47,8 +47,11 @@
 </template>
 
 <script>
+import fullScreen from './fullScreen'
 export default {
-  components: {},
+  components: {
+    fullScreen
+  },
   data() {
     return {
       searchVal:"",

@@ -45,6 +45,14 @@ export const page404 = {
   },
   component: () => import('@/views/error-page/404.vue')
 };
+export const page500 = {
+  path: '/500',
+  name: 'error-500',
+  meta: {
+      title: '500-页面不存在'
+  },
+  component: () => import('@/views/error-page/500.vue')
+};
 
 export const otherRouter = {
   path: '/',
@@ -146,5 +154,6 @@ export const routers = [
   regPwdRouter,
   otherRouter,
   ...appRouter,
+  page500,
   page404
 ]

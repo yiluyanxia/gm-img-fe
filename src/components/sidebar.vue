@@ -29,8 +29,6 @@
     </Menu>
     <help v-if="isHelpShow" :isHelp="isHelpShow"></help>
     <about v-if="isAboutShow" :isAbout="isAboutShow"></about>
-   
-    </drag>
   </div>
 </template>
 <script>

@@ -7,6 +7,7 @@ import {router} from './router/index'
 import iView from 'iview';
 import 'iview/dist/styles/iview.css';
 import './assets/css/styles.css'
+import './assets/css/adaptive.css'
 
 import animate from 'animate.css'
 import {VueMasonryPlugin} from 'vue-masonry';

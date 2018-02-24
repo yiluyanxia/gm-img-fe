@@ -734,3 +734,43 @@ textarea:-ms-input-placeholder {
   color: #2d8cf0;
   cursor: pointer;
 }
+
+/* 404 */
+.errorbox {
+  color: #222;
+  text-align: unset;
+  margin: 7% auto 0;
+  max-width: 768px;
+  min-height: 180px;
+  padding: 30px 0 15px;
+}
+
+.errorbox .imgbox {
+  position: relative;
+  width: 375px;
+  height: 361px;
+}
+
+.errorbox .info {
+  padding: 20px;
+}
+
+.errorbox .brand {
+  font-size: 36px;
+}
+
+.errorbox p {
+  margin: 11px 0 22px;
+}
+
+.errorbox p span {
+  color: #777;
+}
+.fileinput{
+  display: none;
+}
+.fileupload{
+  width: 50px;
+  height: auto;
+  display: inline-block;
+}
