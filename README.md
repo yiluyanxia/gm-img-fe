@@ -28,3 +28,12 @@ npm test
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+## yanxiaDrag
+You may found this error, npm ERR! 404 Not Found: yanxiaDrag@^1.0.0 ！
+You can delete "yanxiaDrag": "^1.0.0" from package.json & continue !
+And then,copy the yanxiaDrag folder on the docs to node_modules,and recover "yanxiaDrag": "^1.0.0" .
+
+## PVW
+![pvw](./docs/images/pvw.gif)
+

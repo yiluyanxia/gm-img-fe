@@ -13,7 +13,7 @@
           <span class="forgot" @click="showModal">Forgot your account?</span>
         </li>
         <li class="li-btn clearfix">
-          <Button class="form-btn" type="primary">NEXT</Button>
+          <Button class="form-btn" type="primary" @click="goLoginPwd">NEXT</Button>
         </li>
       </ul>
     </div>
@@ -33,6 +33,9 @@ export default {
         title: "Oops",
         content: "No one can help you"
       });
+    },
+    goLoginPwd: function() {
+      this.$router.push('login-pwd')
     }
   }
 };

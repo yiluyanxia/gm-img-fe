@@ -12,7 +12,7 @@
         <li class="li-btn clearfix">
           <span class="forgot" @click="showModal">Forgot password?</span>
           <Button class="form-btn" 
-          type="primary">NEXT</Button>
+          type="primary" @click="goMyImages">NEXT</Button>
         </li>
       </ul>
     </div>
@@ -32,6 +32,9 @@ export default {
         title: "Oops",
         content: "No one can help you"
       });
+    },
+     goMyImages: function() {
+      this.$router.push('my-images/index')
     }
   }
 };
